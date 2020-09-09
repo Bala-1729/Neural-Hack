@@ -1,0 +1,189 @@
+//Custom Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//Login Main Container
+.login {
+  width: 27em;
+  height: 38em;
+  //min-height: 44em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+  z-index: 99;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
+    border-radius: 4px;
+    position: relative;
+    z-index: 99;
+    width: 90%;
+    height: 100%;
+    z-index: 99;
+    padding: 17px 10px;
+    //transition: transform 200ms ease-in-out;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    position: absolute;
+    right: -34%;
+    border-radius: 6px;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.5);
+
+    &.right {
+      right: -40%;
+      align-items: flex-end;
+      &:hover {
+        right: -45%;
+      }
+    }
+    &.left {
+      right: 40%;
+      align-items: flex-start;
+      &:hover {
+        right: 45%;
+      }
+    }
+
+    .text {
+      font-size: 21px;
+      font-weight: 500;
+      color: #fff;
+      margin-right: 3em;
+      margin-left: 3em;
+    }
+  }
+}
+
+//Button
+.btn {
+  font-size: 21px;
+  padding: 5px 20px;
+  border: 0;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: #2386c8;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+
+@media screen and (max-width:768px){
+  .login {
+    .container {
+      width: 70%;
+      height: 90%;
+    }
+    .right-side {
+      height: 80%;
+      width: 60%;
+      right: -34%;
+      &.right {
+        right: -20%;
+        &:hover {
+          right: -25%;
+        }
+      }
+      &.left {
+        right: 60%;
+        &:hover {
+          right: 65%;
+        }
+      }
+    }
+  } 
+}
+
+
+  @media screen and (max-width:558px){
+    .login {
+      .container {
+        width: 60%;
+        height: 80%;
+      }
+      .right-side {
+        height: 60%;
+        width: 40%;
+        right: -34%;
+        &.right {
+          right: 0%;
+          &:hover {
+            right: -5%;
+          }
+        }
+        &.left {
+          right: 70%;
+          &:hover {
+            right: 65%;
+          }
+        }
+    
+        .text {
+          font-size: 18px;
+          margin-right: 1em;
+        }
+        
+      }
+    }
+}
