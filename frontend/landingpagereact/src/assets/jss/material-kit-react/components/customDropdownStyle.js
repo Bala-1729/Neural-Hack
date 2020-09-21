@@ -11,7 +11,9 @@ import {
   dangerColor,
   dangerBoxShadow,
   roseColor,
-  roseBoxShadow
+  roseBoxShadow,
+  blueColor,
+  blueBoxShadow,
 } from "assets/jss/material-kit-react.js";
 
 const customDropdownStyle = theme => ({
@@ -21,7 +23,7 @@ const customDropdownStyle = theme => ({
   dropdown: {
     borderRadius: "3px",
     border: "0",
-    boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.26)",
+    boxShadow: "0 2px 5px 0 rgba(0, 0, 0, 0.26 )",
     top: "100%",
     zIndex: "1000",
     minWidth: "160px",
@@ -114,6 +116,13 @@ const customDropdownStyle = theme => ({
       backgroundColor: roseColor,
       color: "#FFFFFF",
       ...roseBoxShadow
+    }
+  },
+  blueHover: {
+    "&:hover": {
+      backgroundColor: blueColor,
+      color: "#FFFFFF",
+      ...blueBoxShadow
     }
   },
   dropdownItemRTL: {

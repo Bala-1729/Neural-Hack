@@ -29,7 +29,8 @@ Badge.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
+    "gray",
+    "mine",
   ]),
   children: PropTypes.node
 };

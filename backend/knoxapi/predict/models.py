@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 class MedicalData(models.Model):
     patientName=models.CharField(max_length=256, null=True)
+    patientId=models.CharField(max_length=256,null=True)
     dateCreated=models.DateTimeField(auto_now_add=True,null=True)
     pregnancies=models.IntegerField(null=True)
     glucose=models.IntegerField(null=True)
@@ -13,5 +14,25 @@ class MedicalData(models.Model):
     bmi=models.FloatField(null=True)
     diabetesPedgreeFunction=models.FloatField(null=True)
     age=models.IntegerField(null=True)
-    Result=models.IntegerField(null=True)
+    result=models.IntegerField(null=True)
     owner=models.ForeignKey(User,related_name="medicalData", on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.patientName
+
+class UserProfile(models.Model):
+    fullName=models.CharField(max_length=256,null=True,default='Full Name')
+    companyName=models.CharField(max_length=256,null=True,default='Company Name')
+    jobRole=models.CharField(max_length=256,null=True,default='Job Role')
+    companyAddress=models.CharField(max_length=256,null=True,default='Company Address')
+    city=models.CharField(max_length=256,null=True,default='City')
+    country=models.CharField(max_length=256,null=True,default='Country')
+    zipCode=models.CharField(max_length=256,null=True,default='ZIP Code')
+    mobileNumber=models.CharField(max_length=256,null=True,default='Mobile Number')
+    DOB=models.CharField(max_length=256,null=True,default='Date Of Birth')
+    description=models.CharField(max_length=256,null=True,default='About Me')
+    user=models.OneToOneField(User,related_name="userProfile",on_delete=models.CASCADE, null=True)
+
+
+    def __str__(self):
+        return self.fullName

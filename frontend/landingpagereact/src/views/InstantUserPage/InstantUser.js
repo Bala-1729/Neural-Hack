@@ -119,8 +119,7 @@ export default function InstantUser(props) {
                                     <p className={classes.divider}>Please provide the required data of the patient.</p>
                                     <CardBody>
                                         <Form />
-                                    </CardBody>
-                                    
+                                    </CardBody>  
                             </Card>
                         </GridItem>
                     </GridContainer>

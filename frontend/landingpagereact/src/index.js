@@ -11,7 +11,10 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import InstantUser from "views/InstantUserPage/InstantUser.js"
 import LoginPage from "views/LoginPage/LoginPage";
-
+import Dashboard from "views/Dashboard/Dashboard";
+import Profile from "views/Profile/Profile";
+import Predict from "views/Predict/Predict"
+import PatientHistory from "views/PatientHistory/PatientHistory"
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -21,6 +24,10 @@ ReactDOM.render(
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/instantUser" component={InstantUser} />
+      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/profile" component={Profile}/>  
+      <Route path="/predict" component={Predict}/>
+      <Route path="/patientHistory" component={PatientHistory}/>
       <Route path="/" component={Components} />
     </Switch>
   </Router>,

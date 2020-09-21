@@ -22,7 +22,7 @@ export default function Form() {
         console.log(bmi, dpf, age);
         axios(
             {
-                url: "http://localhost:8000/test1/instantUser/",
+                url: "http://localhost:8000/api/instantUser/",
                 method: "POST",
                 data: {
                     pregnancies: pregnancies,

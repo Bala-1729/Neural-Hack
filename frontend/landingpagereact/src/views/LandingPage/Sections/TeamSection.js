@@ -21,7 +21,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import team1 from "assets/img/faces/avatar.jpg";
 import team2 from "assets/img/faces/christian.jpg";
-import anudeep from "assets/img/faces/anudeep.png";
+import anudeep from "assets/img/faces/anudeep.jpg";
 import sandeep from "assets/img/faces/sandeep.jpg"
 import bala from "assets/img/faces/bala.png";
 import rishikesh from "assets/img/faces/rishikesh.png"
@@ -55,10 +55,7 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                Experience in Consulting field worked closely with Political consultancy group in developing Predictive models aligning with the On ground strategies.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -67,6 +64,7 @@ export default function TeamSection() {
                 >
                 <Button
                   justIcon
+                  href="https://www.facebook.com/akhil.gopal.142"
                   color="transparent"
                   target="_blank"
                   className={classes.margin5}
@@ -87,6 +85,19 @@ export default function TeamSection() {
                     <i className={classes.socials + " fab fa-linkedin"} style={{color:"rgb(40,103,178)"}} />
                   </Button>
                 </Tooltip>
+                <Tooltip
+                  title="Connect:Instagram"
+                >
+                <Button
+                  justIcon
+                  href="https://www.instagram.com/"
+                  color="transparent"
+                  target="_blank"
+                  className={classes.margin5}
+                >
+                  <img src="https://www.transparentpng.com/thumb/logo-instagram/oKmsnf-logo-instagram-simple-png.png" alt="Logo Instagram Simple PNG @transparentpng.com" style={{width:21.5,height:21.5}}/>
+                </Button>
+              </Tooltip>
               </CardFooter>
             </Card>
           </GridItem>
@@ -325,47 +336,47 @@ export default function TeamSection() {
               </h4>
               <CardBody>
                 <p className={classes.description}>
-                  You can write here details about one of your team members. You
-                  can give more details about what they do. Feel free to add
-                  some <a href="#pablo">links</a> for people to be able to
-                  follow them outside the site.
+                  Keep exploring.
                 </p>
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
-              <Tooltip
-                  title="Connect:Instagram"
-                >
-                <Button
-                  justIcon
-                  color="transparent"
-                  target="_blank"
-                  className={classes.margin5}
-                >
-                  <i className={classes.socials + " fab fa-twitter"} />
-                </Button>
-              </Tooltip>
-              <Tooltip
-                  title="Connect:Instagram"
-                >
-                <Button
-                  justIcon
-                  color="transparent"
-                  target="_blank"
-                  className={classes.margin5}
-                >
-                 <img src="https://www.transparentpng.com/thumb/logo-instagram/oKmsnf-logo-instagram-simple-png.png" alt="Logo Instagram Simple PNG @transparentpng.com" style={{width:21.5,height:21.5}}/>
-                </Button>
-              </Tooltip>
               <Tooltip
                   title="Connect:Facebook"
                 >
                 <Button
                   justIcon
+                  href="https://www.facebook.com/profile.php?id=100007316589357"
                   color="transparent"
                   target="_blank"
                   className={classes.margin5}
                 >
-                  <i className={classes.socials + " fab fa-facebook"} style={{color:"rgb(66,103,178)"}}/>
+                  <i className={classes.socials + " fab fa-facebook"} style={{color:"rgb(40,103,178)"}}/>
+                </Button>
+              </Tooltip>
+              <Tooltip
+                  title="Connect:LinkedIn"
+                >
+                <Button
+                  justIcon
+                  href="www.linkedin.com/in/anudeep-chakilam-59826018a"
+                  color="transparent"
+                  target="_blank"
+                  className={classes.margin5}
+                >
+                  <i className={classes.socials + " fab fa-linkedin"} style={{color:"rgb(66,103,178)"}}/>
+                </Button>
+              </Tooltip>
+              <Tooltip
+                  title="Connect:Instagram"
+                >
+                <Button
+                  justIcon
+                  href="https://www.instagram.com/chakilam.anudeep/"
+                  color="transparent"
+                  target="_blank"
+                  className={classes.margin5}
+                >
+                 <img src="https://www.transparentpng.com/thumb/logo-instagram/oKmsnf-logo-instagram-simple-png.png" alt="Logo Instagram Simple PNG @transparentpng.com" style={{width:21.5,height:21.5}}/>
                 </Button>
               </Tooltip>
               </CardFooter>

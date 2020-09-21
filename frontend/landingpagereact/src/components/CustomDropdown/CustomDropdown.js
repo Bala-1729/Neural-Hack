@@ -167,7 +167,7 @@ export default function CustomDropdown(props) {
 
 CustomDropdown.defaultProps = {
   caret: true,
-  hoverColor: "primary"
+  hoverColor: "blue"
 };
 
 CustomDropdown.propTypes = {
@@ -178,7 +178,8 @@ CustomDropdown.propTypes = {
     "success",
     "warning",
     "danger",
-    "rose"
+    "rose",
+    "blue"
   ]),
   buttonText: PropTypes.node,
   buttonIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

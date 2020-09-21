@@ -106,7 +106,8 @@ const headerLinksStyle = theme => ({
       textDecoration: "none",
       display: "block",
       padding: "10px 20px"
-    }
+    },
+    
   },
   ...tooltip,
   marginRight5: {

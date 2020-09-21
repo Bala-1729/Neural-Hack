@@ -27,22 +27,26 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-      <Button
-          href="../landing-page"
-          color="transparent"
-          target="_self"
-          className={classes.navLink}
-        >
-        <Home className={classes.icons} /> Home
-      </Button>
-      <Button
-          href="../login-page"
-          color="transparent"
-          target="_self"
-          className={classes.navLink}
-        >
-        <Person className={classes.icons} /> Login/Register
-      </Button>
+        <Button
+            href="../landing-page"
+            color="transparent"
+            target="_self"
+            className={classes.navLink}
+          >
+          <Home className={classes.icons} /> Home
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+            href="../login-page"
+            color="transparent"
+            target="_self"
+            className={classes.navLink}
+          >
+          <Person className={classes.icons} /> Login/Register
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
       <Button
           href="../instantUser"
           color="transparent"
