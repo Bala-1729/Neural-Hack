@@ -109,13 +109,3 @@ export default function SectionTabs(props) {
   );
 }
 
-// axios({
-//   url: "http://localhost:8000/api/pastWeek/",
-//   method: "GET",
-//   headers: {
-//     Authorization: `Token ${token}`,
-//   },
-// }).then(function (response) {
-//   console.log(response.data);
-//   rows= response.data;
-// });

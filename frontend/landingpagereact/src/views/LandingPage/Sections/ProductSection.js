@@ -6,14 +6,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Chat from "@material-ui/icons/Chat";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import Fingerprint from "@material-ui/icons/Fingerprint";
-import PregnantWomanIcon from '@material-ui/icons/PregnantWoman';
+import PregnantWomanIcon from "@material-ui/icons/PregnantWoman";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
-import TrackChangesIcon from '@material-ui/icons/TrackChanges';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import TrackChangesIcon from "@material-ui/icons/TrackChanges";
+import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
@@ -25,13 +25,16 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title} style={{color:"black"}}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title} style={{ color: "black" }}>
+            Let{"'"}s talk product.
+          </h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            Infusing the technology of machine learning paired with simple user
+            interface we bring forth our product. Launched in 2020. Our product helps in
+            simple testing for diabetes. By providing simple data such as
+            Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI,
+            DiabetesPedgreeFunction, Age, an almost cent precent accurate result
+            is obtained.
           </h5>
         </GridItem>
       </GridContainer>
@@ -66,7 +69,7 @@ export default function ProductSection() {
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
             <InfoArea
-              title="Only for Women."
+              title="Exclusively for Women."
               description="Our model is trained only for women, as it takes in number of pregnancies as a parameter  but we assure this will be available for all soon!."
               icon={PregnantWomanIcon}
               iconColor="rose"

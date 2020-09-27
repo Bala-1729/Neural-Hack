@@ -7,9 +7,13 @@ import GridItem from "components/Grid/GridItem.js";
 import CardBody from "components/Card/CardBody";
 import Button from "components/CustomButtons/Button";
 import TextField from "@material-ui/core/TextField";
-import PersonIcon from '@material-ui/icons/Person';
+import PersonIcon from "@material-ui/icons/Person";
 import LockIcon from "@material-ui/icons/Lock";
-import EmailIcon from '@material-ui/icons/Email';
+import EmailIcon from "@material-ui/icons/Email";
+import Alert from '@material-ui/lab/Alert';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
 // core components
 import styles from "assets/jss/material-kit-react/components/cardStyle.js";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,6 +26,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [flag, setFlag] = useState(false);
+  const [open, setOpen] = useState(false);
   const Submit = (e) => {
     e.preventDefault();
     axios({
@@ -40,7 +45,11 @@ function Register() {
         Test(localStorage.getItem("token"));
       })
       .catch(function (error) {
-        console.log(error);
+        setEmail('')
+        setPassword('')
+        setUsername('')
+        if(username!='' && password!='' && email!='')setOpen(true)
+        console.log(error)
       });
   };
   const Test = (token) => {
@@ -110,7 +119,7 @@ function Register() {
                     fullWidth={true}
                     id="email"
                     name="email"
-                    type="text"
+                    type="email"
                     label="Email"
                     value={email}
                     onChange={(exe) => setEmail(exe.target.value)}
@@ -137,6 +146,26 @@ function Register() {
               </GridContainer>
             </GridContainer>
           </CardBody>
+          <Collapse in={open}>
+          <Alert
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            fontSize="small"
+            severity="error"
+          >
+            Invalid data or Username|Email already exists!
+          </Alert>
+        </Collapse>
           <Button
             onClick={Submit}
             value={flag}

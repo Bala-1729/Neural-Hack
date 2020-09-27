@@ -399,6 +399,19 @@ export default function TeamSection() {
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
               <Tooltip
+                  title="Connect:Facebook"
+                >
+                <Button
+                  justIcon
+                  href="#"
+                  color="transparent"
+                  target="_blank"
+                  className={classes.margin5}
+                >
+                  <i className={classes.socials + " fab fa-facebook"} style={{color:"rgb(66,103,178)"}}/>
+                </Button>
+              </Tooltip>
+              <Tooltip
                   title="Connect:LinkedIn"
                 >
                 <Button

@@ -10,8 +10,7 @@ import Fingerprint from "@material-ui/icons/Fingerprint";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
-import SectionCarousel from "views/Components/Sections/SectionCarousel.js";
-import ModalBox from "./ModalBox"
+import ModalBox from "./ModalBox";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import { Modal } from "@material-ui/core";
@@ -23,18 +22,32 @@ export default function ProductSection() {
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title} style={{color:"black"}}>Why Trust Us?</h2>
+        <GridItem xs={12} sm={12} md={12}>
+          <h2 className={classes.title} style={{ color: "black" }}>
+            Why Trust Us?
+          </h2>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            One of the most important factor is the relationship with the
+            customer, when it comes to health related problems generally people
+            don't believe anything untill they get to know from a doctor. But
+            here we deliberately show how we process the data that we get from
+            the user to determine the end result. We processed over thousands of test
+            samples with 6 different algorithms to bring the most efficient way
+            to analyse your medical data. Still don't trust us? you can cross
+            verify your own test data in the <strong>One time user </strong>
+            section present in the navigation bar!
           </h5>
+          <br />
         </GridItem>
       </GridContainer>
-      <ModalBox/>
+      <h4 className={classes.description}>
+        <p style={{ color: "red", display: "inline-block", fontSize: 18 }}>
+          Note:
+        </p>{" "}
+        The below section is only for AI/ML Enthusiast else get ready to have
+        your mind blown.
+      </h4>
+      <ModalBox />
     </div>
   );
 }

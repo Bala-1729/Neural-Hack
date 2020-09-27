@@ -49,6 +49,7 @@ export default function LoginPage(props) {
         },
       });
       const data1 = await response.data;
+      console.log(data1)
       setTotal(data1.length);
       setNegative(data1.negative);
       setPositive(data1.positive);
@@ -93,7 +94,7 @@ export default function LoginPage(props) {
             </CardHeader>
             <CardBody className={classes.cardBody}>
               <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontWeight: "bold" }}>{positive} Patients</h3>
+                <h3 style={{ fontWeight: "bold" }}>{negative} Patients</h3>
               </div>
             </CardBody>
             <CardFooter className={classes.cardFooter}>
@@ -109,7 +110,7 @@ export default function LoginPage(props) {
             </CardHeader>
             <CardBody className={classes.cardBody}>
               <div style={{ textAlign: "center" }}>
-                <h3 style={{ fontWeight: "bold" }}>{negative} Patients</h3>
+                <h3 style={{ fontWeight: "bold" }}>{positive} Patients</h3>
               </div>
             </CardBody>
             <CardFooter className={classes.cardFooter}>
@@ -124,23 +125,3 @@ export default function LoginPage(props) {
     </div>
   );
 }
-
-
-// const Load = (e) => {
-//   axios
-//     .get("http://localhost:8000/api/medicalData/", {
-//       headers: {
-//         Authorization: `Token ${token}`,
-//       },
-//     })
-//     .then((res) => {
-//       setTotal(res.data.length);
-//       setPositive(res.data.positive);
-//       setNegative(res.data.negative);
-//       localStorage.setItem("positive", res.data.positive);
-//       localStorage.setItem("negative", res.data.negative);
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
-// };

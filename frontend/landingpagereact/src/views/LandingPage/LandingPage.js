@@ -49,13 +49,13 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Lorem ipsum dolor sit amet.</h1>
+              <h1 className={classes.title}>Fast. Accurate. At the Click of a Finger.</h1>
             </GridItem>
           </GridContainer>
           <GridContainer>
             <GridItem xs={12} sm={12} md={10}>
               <h4>
-              Vestibulum molestie dictum pellentesque. Suspendisse risus ex, scelerisque quis vestibulum sit amet, porttitor elementum lectus. Cras viverra ut nunc eu facilisis. Ut iaculis, nisi ac tempor scelerisque, libero augue sodales elit, quis volutpat sapien justo tempus lectus. Donec lobortis eu magna eget interdum.
+              Within the comfort of your house, get instant updates on your health condition in a matter of seconds.
               </h4>
               <br />
               <Button
@@ -76,7 +76,6 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <ProductSection />
           <WhyUs/>
-          <Working/>
           <TeamSection />
           <ContactUsSection />
         </div>

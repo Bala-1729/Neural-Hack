@@ -15,7 +15,7 @@ import TextField from "@material-ui/core/TextField";
 import { Redirect } from "react-router-dom";
 //icons
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
-import avatar from "assets/img/useridm.png";
+import avatar from "assets/img/hosp.jpg";
 import { localeData } from "moment";
 
 const useStyles = makeStyles(styles);
@@ -47,11 +47,13 @@ export default function LoginPage(props) {
     }).then(function (response) {
       console.log(response);
       document.getElementById(
-        "jobRole"
-      ).innerHTML = `${response.data.jobRole} @ ${response.data.companyName}`;
-      document.getElementById("fullname").innerHTML = response.data.fullName;
+        "company"
+      ).innerHTML = `${response.data.companyName}`;
+
+      document.getElementById("rep").innerHTML = `${response.data.fullName} | ${response.data.jobRole}`;
       document.getElementById("desc").innerHTML = response.data.description;
-      document.getElementById("contact").innerHTML ='Contact: '+response.data.mobileNumber;
+      document.getElementById("contact").innerHTML =
+        "Contact: " + response.data.mobileNumber;
     });
   };
 
@@ -108,21 +110,9 @@ export default function LoginPage(props) {
                       id="fullName"
                       name="fullName"
                       type="text"
-                      label="Full Name"
+                      label="Representative Name"
                       value={fullName}
                       onChange={(exe) => setFullName(exe.target.value)}
-                      required
-                    />
-                  </GridItem>
-                  <GridItem xs={12} sm={6} md={6} style={{ padding: 20 }}>
-                    <TextField
-                      fullWidth={true}
-                      id="companyName"
-                      name="companyName"
-                      type="text"
-                      label="Company Name"
-                      value={companyName}
-                      onChange={(exe) => setcompanyName(exe.target.value)}
                       required
                     />
                   </GridItem>
@@ -137,12 +127,24 @@ export default function LoginPage(props) {
                       required
                     />
                   </GridItem>
+                  <GridItem xs={12} sm={6} md={6} style={{ padding: 20 }}>
+                    <TextField
+                      fullWidth={true}
+                      id="companyName"
+                      name="companyName"
+                      type="text"
+                      label="Hospital Name"
+                      value={companyName}
+                      onChange={(exe) => setcompanyName(exe.target.value)}
+                      required
+                    />
+                  </GridItem>
                   <GridItem xs={12} sm={12} md={12} style={{ padding: 20 }}>
                     <TextField
                       fullWidth={true}
                       name="address"
                       type="text"
-                      label="Company Address"
+                      label="Hospital Address"
                       value={address}
                       onChange={(exe) => setaddress(exe.target.value)}
                       required
@@ -211,7 +213,7 @@ export default function LoginPage(props) {
                       multiline
                       rowsMax={10}
                       rows={8}
-                      label="Description"
+                      label="Hospital Description"
                       value={description}
                       onChange={(exe) => setdescription(exe.target.value)}
                       required
@@ -219,7 +221,7 @@ export default function LoginPage(props) {
                   </GridItem>
                   <CardFooter>
                     <Button onClick={Submit} type="submit" color="mine">
-                      Create!!
+                      Update Profile!!
                     </Button>
                   </CardFooter>
                 </GridContainer>
@@ -230,22 +232,20 @@ export default function LoginPage(props) {
         <GridItem xs={12} sm={12} md={4}>
           <Card profile className={classes[cardAnimaton]}>
             <CardAvatar profile>
-              <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
+              <img src={avatar} alt="Rep Static Image" />
             </CardAvatar>
             <CardBody profile>
-              <h4 id="fullname" className={classes.cardTitle} align="center">
-                Full Name
-              </h4>
-              <h6 id="jobRole" className={classes.cardCategory} align="center">
-                Job Role at Hospital Name
+              <h6 id="company" className={classes.cardCategory} align="center">
+                
               </h6>
+              <h5 id="rep" className={classes.cardTitle} align="center">
+               
+              </h5>
               <p id="desc" className={classes.description} align="center">
-                Tell everyone something about you!!!
+                
               </p>
-              <p  id="contact" className={classes.description} align="center">
-                Contact:user@example.com
+              <p id="contact" className={classes.description} align="center">
+                
               </p>
             </CardBody>
           </Card>

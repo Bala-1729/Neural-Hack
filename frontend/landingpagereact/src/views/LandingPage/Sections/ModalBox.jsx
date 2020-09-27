@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from "components/CustomButtons/Button.js";
 import WarningIcon from "@material-ui/icons/Warning";
-import SectionCarousel from 'views/Components/Sections/SectionCarousel';
+import SectionCarousel from './SectionCarousel';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -53,7 +53,6 @@ export default function TransitionsModal() {
         <Fade in={open}>
         <div className={classes.paper}>
             <SectionCarousel/>
-            <h2 id="transition-modal-title" style={{textAlign:"center"}}>Modal Explanation</h2>
           </div>
           
         </Fade>

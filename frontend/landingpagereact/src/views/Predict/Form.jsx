@@ -196,9 +196,9 @@ dummmy();
           <GridItem
             id="result"
             xs={12}
-            sm={6}
-            md={8}
-            style={{ padding: 30 }}
+            sm={12}
+            md={12}
+            style={{ padding: 30, color:"red", fontWeight:"bold", fontSize:15}}
           ></GridItem>
         </CardFooter>
       </GridContainer>

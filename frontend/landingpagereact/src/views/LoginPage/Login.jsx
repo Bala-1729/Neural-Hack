@@ -6,15 +6,19 @@ import { Redirect } from "react-router-dom";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CardBody from "components/Card/CardBody";
-import PersonIcon from '@material-ui/icons/Person';
+import PersonIcon from "@material-ui/icons/Person";
 
 import Button from "components/CustomButtons/Button";
-
+import Alert from "@material-ui/lab/Alert";
+import IconButton from "@material-ui/core/IconButton";
+import Collapse from "@material-ui/core/Collapse";
+import CloseIcon from "@material-ui/icons/Close";
 import TextField from "@material-ui/core/TextField";
 import LockIcon from "@material-ui/icons/Lock";
 // core components
 import styles from "assets/jss/material-kit-react/components/cardStyle.js";
 import { makeStyles } from "@material-ui/core/styles";
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import { Grid } from "@material-ui/core";
 import { Lock } from "@material-ui/icons";
 
@@ -22,6 +26,7 @@ const useStyles = makeStyles(styles);
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [open, setOpen] = useState(false);
   const [flag, setFlag] = useState(false);
 
   const classes = useStyles();
@@ -43,7 +48,9 @@ function Login() {
         setFlag(true);
       })
       .catch(function (error) {
-        console.log(error);
+        setUsername("");
+        setPassword("");
+        if(username!='' && password!='')setOpen(true);
       });
   };
 
@@ -105,6 +112,27 @@ function Login() {
                   />
                 </GridItem>
               </GridContainer>
+              <GridItem xs={12} sm={12} md={12}>
+                <Collapse in={open}>
+                  <Alert
+                    action={
+                      <IconButton
+                        aria-label="close"
+                        color="inherit"
+                        size="small"
+                        onClick={() => {
+                          setOpen(false);
+                        }}
+                      >
+                        <CloseIcon fontSize="inherit" />
+                      </IconButton>
+                    }
+                    severity="error"
+                  >
+                    Username and Password doesn't match!
+                  </Alert>
+                </Collapse>
+              </GridItem>
               <GridItem xs={12} sm={12} md={12} style={{ padding: 10 }}>
                 <Button
                   onClick={Submit}

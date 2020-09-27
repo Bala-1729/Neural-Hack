@@ -94,20 +94,16 @@ export default function InstantUser(props) {
                     tabContent: (
                       <span>
                         <p>
-                          Welcome, here are some points that should be noted before starting to work with
+                          Hey there, here are some points that should be noted before starting to work with
                           this site.
                         </p>
-                        <br />
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Quisque nec nulla at metus sagittis sodales nec
-                          eget risus. Nulla bibendum faucibus tellus, ac
-                          interdum tellus euismod ut. In hac habitasse platea
-                          dictumstLorem ipsum dolor sit amet, consectetur
-                          adipiscing elit. Quisque nec nulla at metus sagittis
-                          sodales nec eget risus. Nulla bibendum faucibus
-                          tellus, ac interdum tellus euismod ut. In hac
-                          habitasse platea dictumst.
+                          The most important point to be noted is that, our prediction model is only compatible 
+                          with female patients because the AIML model takes in the term Pregnancy as one of the inputs. So Please
+                          make sure to enter correct data.
+                        </p>
+                        <p>
+                        👈Brief description of the parameters required are given in the details tab.
                         </p>
                       </span>
                     ),
@@ -121,7 +117,7 @@ export default function InstantUser(props) {
                           {" "}
                           <Badge color="mine">Pregnancies</Badge>
                           <br />
-                          Number of times pregnant
+                          Previous Pregnancies
                         </li>
                         <br />
                         <li>

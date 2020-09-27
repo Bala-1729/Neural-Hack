@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -60,12 +61,32 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent ='Welcome, Balasubramaniam A'
+  const token=localStorage.getItem("token");
+  const [brandComponent, setBrandComponent] = React.useState();
+  async function Loader() {
+    try {
+        const response = await axios({
+        url: "http://localhost:8000/api/userName/",
+        method: "GET",
+        headers: {
+          Authorization: `Token ${token}`,
+        },
+      });
+      const data1 = await response.data;
+      setBrandComponent(`Welcome, ${data1.username}`)
+      return data1;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  console.log("start")
+  Loader();
+  console.log("Stop")
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
-        <div className={classes.flex} style={{fontSize:"20px"}}>
+        <div className={classes.flex} style={{fontSize:"25px"}}>
           {leftLinks !== undefined ? (
             <Hidden smDown implementation="css">
               {leftLinks}

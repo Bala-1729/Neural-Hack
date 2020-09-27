@@ -2,7 +2,7 @@ import { func } from "prop-types";
 import React, { PureComponent } from "react";
 import { PieChart, Pie, Cell } from "recharts";
 import axios from "axios"
-const COLORS = ["#4caf50", "#f44336"];
+const COLORS = ["#f44336","#4caf50"];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -45,8 +45,8 @@ async function Load() {
     const data1 = await response.data;
     console.log(data1)
     data = [
-      { name: "Group A", value: data1.positive },
-      { name: "Group B", value: data1.negative },
+      { name: "positive", value: data1.positive },
+      { name: "negative", value: data1.negative },
     ];
     console.log(data);
     return data;

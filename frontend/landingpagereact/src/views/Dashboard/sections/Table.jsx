@@ -7,7 +7,7 @@ import axios from "axios";
 
 const column = [
     { title: 'Patient Name', field: 'patientName', align:'center'},
-    { title: 'Patient Id', field: 'id', align:'center'},
+    { title: 'Patient Id', field: 'patientId', align:'center'},
     { title: 'Pregnancies', field: 'pregnancies', align:'center'},
     { title: 'Glucose', field: 'glucose', align:'center'},
     { title: 'Blood Pressure', field: 'bloodPressure', align:'center'},
