@@ -81,7 +81,7 @@ export default function HeaderLinks(props) {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://github.com/Bala-1729/diabetes-prediction-django"
+            href="https://github.com/Bala-1729/Neural-Hack"
             color="transparent"
             target="_blank"
             className={classes.navLink}
